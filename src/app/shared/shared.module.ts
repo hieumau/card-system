@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatButtonModule} from "@angular/material/button";
 import {MatCardModule} from "@angular/material/card";
 import {MatDatepickerModule} from "@angular/material/datepicker";
@@ -37,24 +37,25 @@ import {IndexComponent} from "./page/index/index.component";
     MaterialElevationDirective,
 
   ],
-  imports: [
-    CommonModule,
-    MatCardModule,
-    MatFormFieldModule,
-    MatButtonModule,
-    MatInputModule,
-    MatProgressBarModule,
-    RouterLink,
-    MatGridListModule,
-    MatExpansionModule,
-    MatDatepickerModule,
-    ReactiveFormsModule,
-    MatIconModule,
-    MatTooltipModule,
-    ShareModule,
-    ShareButtonModule,
-    ShareIconsModule
-  ],
+    imports: [
+        CommonModule,
+        MatCardModule,
+        MatFormFieldModule,
+        MatButtonModule,
+        MatInputModule,
+        MatProgressBarModule,
+        RouterLink,
+        MatGridListModule,
+        MatExpansionModule,
+        MatDatepickerModule,
+        ReactiveFormsModule,
+        MatIconModule,
+        MatTooltipModule,
+        ShareModule,
+        ShareButtonModule,
+        ShareIconsModule,
+        FormsModule
+    ],
   providers: []
 })
 export class SharedModule {

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "crow-funding-fe": {
+    "card-app-fe": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/crow-funding-fe",
+            "outputPath": "dist/card-app-fe",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -71,18 +71,22 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "crow-funding-fe:build:production"
+              "browserTarget": "card-app-fe:build:production"
             },
             "development": {
-              "browserTarget": "crow-funding-fe:build:development"
+              "browserTarget": "card-app-fe:build:development"
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "development",
+          "options": {
+            "browserTarget": "card-app-fe:build",
+            "proxyConfig": "src/proxy.conf.json"
+          }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "crow-funding-fe:build"
+            "browserTarget": "card-app-fe:build"
           }
         },
         "test": {
@@ -104,7 +108,8 @@
             ],
             "scripts": []
           }
-        }
+        },
+
       }
     }
   }

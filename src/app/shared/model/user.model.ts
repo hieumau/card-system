@@ -1,11 +1,8 @@
 export class User {
-  id?: number
-  email?: string
-  first_name?: string
-  last_name?: string
-  avatar?: string
-
-  name?: string | null | undefined
-  job?: string | null | undefined
-  createdAt?: Date
+  id?: number | undefined | null
+  email?: string | undefined | null
+  first_name?: string | undefined | null
+  last_name?: string | undefined | null
+  username?: string | undefined | null
+  password?: string | undefined | null
 }

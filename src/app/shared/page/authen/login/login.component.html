@@ -2,14 +2,14 @@
   <mat-card class="card login-card mat-elevation-z8">
     <mat-card-title style="text-align: center">Login</mat-card-title>
     <mat-card-content class="pt-5">
-      <form>
+      <form [formGroup]="form">
         <mat-form-field class="input-field">
-          <mat-label>Username</mat-label>
-          <input matInput placeholder="Username">
+          <mat-label>Email</mat-label>
+          <input formControlName="email" matInput placeholder="Email">
         </mat-form-field>
         <mat-form-field class="input-field">
           <mat-label>Password</mat-label>
-          <input matInput type="password" placeholder="Password">
+          <input formControlName="password" matInput type="password" placeholder="Password">
         </mat-form-field>
       </form>
     </mat-card-content>
