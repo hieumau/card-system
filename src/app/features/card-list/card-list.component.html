@@ -37,8 +37,8 @@
             </div>
           </div>
           <div class="card-button-container" *ngIf="isLoggedIn()">
-            <button class="btn btn--block card__btn edit">Edit</button>
-            <button class="btn btn--block card__btn delete">Delete</button>
+            <button class="btn btn--block card__btn edit" [routerLink]="[card._id.$oid + '/edit']">Edit</button>
+            <button class="btn btn--block card__btn delete" (click)="deleteCard(card._id.$oid)">Delete</button>
           </div>
         </div>
       </div>

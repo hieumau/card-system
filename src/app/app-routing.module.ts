@@ -18,6 +18,10 @@ const routes: Routes = [
     component: CardListComponent
   },
   {
+    path: 'cards/:id/edit',
+    component: CardDetailComponent
+  },
+  {
     path: 'cards/:id',
     component: CardDetailComponent
   },

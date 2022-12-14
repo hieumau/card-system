@@ -50,7 +50,7 @@ export class CardService {
   }
 
 
-  deleteCard(id: string): Promise<{ id: string }> {
+  deleteCard(id: string): Promise<any> {
     return new Promise((resolve, reject) => {
       this.apiService.post(this.baseUrl + 'delete', {id: id}).subscribe((value: any) => {
           resolve(value)
