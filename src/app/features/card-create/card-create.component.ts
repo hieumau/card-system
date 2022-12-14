@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {MatSnackBar} from "@angular/material/snack-bar";
 import {Card} from "../../shared/model/card";
 import {CardService} from "../../shared/service/card.service";
 
@@ -10,19 +11,29 @@ import {CardService} from "../../shared/service/card.service";
 export class CardCreateComponent implements OnInit {
   card: Card = new Card()
 
-  constructor(private cardService: CardService) {
+  constructor(private cardService: CardService,
+              private snackBar: MatSnackBar) {
   }
 
   ngOnInit(): void {
+
   }
 
   createCard() {
-    if (this.card.Name != null && this.card.Name.toString().trim().length > 0) {
-
-    }
-
+    this.validate()
     this.cardService.createCard(this.card).then(result => {
-      console.log(result)
+      this.snackBar.open('Create card successfully!', '', {duration: 3000})
     })
+  }
+
+  updateCard() {
+    this.validate()
+    this.cardService.createCard(this.card).then(result => {
+      this.snackBar.open('Update card successfully!', '', {duration: 3000})
+    })
+  }
+
+  private validate() {
+
   }
 }

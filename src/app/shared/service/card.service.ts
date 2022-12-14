@@ -38,4 +38,26 @@ export class CardService {
     })
   }
 
+  updateCard(card: Card): Promise<{ id: string }> {
+    return new Promise((resolve, reject) => {
+      this.apiService.post(this.baseUrl + 'edit_card', card).subscribe((value: any) => {
+          resolve(value)
+        },
+        error => {
+          reject(error)
+        })
+    })
+  }
+
+
+  deleteCard(id: string): Promise<{ id: string }> {
+    return new Promise((resolve, reject) => {
+      this.apiService.post(this.baseUrl + 'delete', {id: id}).subscribe((value: any) => {
+          resolve(value)
+        },
+        error => {
+          reject(error)
+        })
+    })
+  }
 }
