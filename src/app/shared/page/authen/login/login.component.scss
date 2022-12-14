@@ -1,8 +1,3 @@
-.page-container {
-  background: var(--background);
-  height: 100vh;
-  width: 100vw;
-}
 
 .card.login-card {
   position: fixed;
@@ -10,14 +5,7 @@
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  min-width: 500px;
-}
-
-@media screen and (max-width: 600px) {
-  .card.login-card {
-    width: calc(100% - 50px);
-    min-width: 100px;
-  }
+  width: 500px;
 }
 
 .register-link {
@@ -28,7 +16,3 @@ mat-card-actions {
   margin-bottom: 0;
   margin-top: 0;
 }
-//mat-card-actions {
-//  display: flex;
-//  justify-content: center;
-//}
