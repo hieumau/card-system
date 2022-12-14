@@ -7,6 +7,7 @@
   height: 60px;
 
 }
+
 .avatar.small {
   height: 35px;
 }
@@ -23,6 +24,9 @@ mat-card-actions {
 
 // page have table
 .page-container {
+  background-color: #f0f0f0;
+  padding-top: 40px;
+
   .page-header {
     text-align: center;
     font-size: 1.5rem;
@@ -30,6 +34,7 @@ mat-card-actions {
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
+
   .page-action {
     display: flex;
     justify-content: right;
@@ -37,12 +42,14 @@ mat-card-actions {
     padding-right: 1rem;
     padding-bottom: 1rem;
   }
+
   .page-content {
     padding: 0 1rem;
     display: flex;
     justify-content: center;
   }
-  background: var(--white);
+
+  min-height: 100vh;
 }
 
 // table
@@ -50,8 +57,10 @@ mat-card-actions {
 table {
   width: 100%;
 }
+
 .table-container {
   padding: 1rem;
+
   table {
     width: 100%;
   }
@@ -64,4 +73,53 @@ table {
 
 .mat-form-field-wrapper {
   padding-bottom: 0;
+}
+
+
+.toolbar {
+  position: fixed;
+  z-index: 100;
+}
+
+/* CSS */
+.header-button {
+  margin: 10px;
+  padding: 15px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  display: block;
+  border: 0px;
+  font-weight: 700;
+  box-shadow: 0px 0px 14px -7px #f09819;
+  background-image: linear-gradient(45deg, #FF512F 0%, #F09819 51%, #FF512F 100%);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.header-button:hover {
+  background-position: right center;
+  color: #cdd1ff;
+  text-decoration: none;
+}
+
+.header-button:active {
+  transform: scale(0.95);
+}
+
+
+.header-button.secondary {
+  color: #f09819;
+  background-image: linear-gradient(45deg, #fff9f8 0%, #fff3e8 51%, #cbcfe3 100%);
+}
+
+.header-button.secondary:hover {
+  background-position: right center;
+  color: #ff0000;
+  text-decoration: none;
 }

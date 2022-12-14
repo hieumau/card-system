@@ -1,1 +1,48 @@
-<p>card-list works!</p>
+<button (click)="authService.signOut()">logout</button>
+<div class="page-container">
+  <ul class="cards">
+    <li *ngFor="let card of cardList" class="cards__item">
+      <div class="card">
+        <!--      <div class="card__image card__image&#45;&#45;fence"></div>-->
+        <div class="card__content">
+          <div class="card__title">{{card.Name}}</div>
+          <div class="card-property-container">
+            <div class="info-pair">
+              <div class="info-name">Name</div>
+              <div class="info-value">{{card.Name}}</div>
+            </div>
+            <div class="info-pair">
+              <div class="info-name">Type</div>
+              <div class="info-value">{{card.Type}}</div>
+            </div>
+            <div class="info-pair">
+              <div class="info-name">Level</div>
+              <div class="info-value">{{card.Level}}</div>
+            </div>
+            <div class="info-pair">
+              <div class="info-name">Race</div>
+              <div class="info-value">{{card.Race}}</div>
+            </div>
+            <div class="info-pair">
+              <div class="info-name">Attribute</div>
+              <div class="info-value">{{card.Attribute}}</div>
+            </div>
+            <div class="info-pair">
+              <div class="info-name">ATK</div>
+              <div class="info-value">{{card.ATK}}</div>
+            </div>
+            <div class="info-pair">
+              <div class="info-name">DEF</div>
+              <div class="info-value">{{card.DEF}}</div>
+            </div>
+          </div>
+          <div class="button-container" *ngIf="isLoggedIn()">
+            <button class="btn btn--block card__btn edit">Edit</button>
+            <button class="btn btn--block card__btn delete">Delete</button>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+</div>

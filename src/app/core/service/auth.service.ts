@@ -23,7 +23,8 @@ export class AuthService {
   }
 
   get isLoggedIn(): boolean {
-    return !!this.getToken();
+    let token = this.getToken()
+    return token !== 'null'
   }
 
   public getToken(): string | null {
@@ -31,6 +32,7 @@ export class AuthService {
   }
 
   public signOut() {
+    this.router.navigate(['login'])
     this.setToken(null);
   }
 

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {AuthService} from "../../core/service/auth.service";
+import {Card} from "../../shared/model/card";
+import {CardService} from "../../shared/service/card.service";
 
 @Component({
   selector: 'app-card-list',
@@ -7,9 +10,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardListComponent implements OnInit {
 
-  constructor() { }
+  cardList: Card[] = []
+
+  constructor(private cardService: CardService,
+              public authService: AuthService) { }
 
   ngOnInit(): void {
+    this.cardService.getListCard().then(result => {
+      this.cardList = result
+    })
+  }
+
+  isLoggedIn() {
+    var loggedIn = this.authService.isLoggedIn;
+    console.log(loggedIn)
+    return loggedIn
   }
 
 }

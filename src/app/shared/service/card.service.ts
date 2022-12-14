@@ -16,7 +16,7 @@ export class CardService {
 
   baseUrl: string = environment.apiUrl + '/'
 
-  getListCard(size: number, page: number): Promise<Card[]> {
+  getListCard(): Promise<Card[]> {
     return new Promise((resolve, reject) => {
       this.apiService.get(this.baseUrl, 'show').subscribe((value: any) => {
           resolve(value)
