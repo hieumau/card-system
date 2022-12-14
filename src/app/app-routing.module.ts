@@ -19,7 +19,7 @@ const routes: Routes = [
   },
   {
     path: 'cards/:id/edit',
-    component: CardDetailComponent
+    component: CardCreateComponent
   },
   {
     path: 'cards/:id',

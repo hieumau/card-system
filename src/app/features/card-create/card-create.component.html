@@ -36,7 +36,9 @@
 
       <mat-card-actions>
         <div>
-          <button mat-raised-button color="primary" (click)="createCard()">Create</button>
+          <button mat-raised-button color="primary" *ngIf="mode == 'create'" (click)="summit()">Create</button>
+          <button mat-raised-button color="primary" *ngIf="mode == 'edit'" (click)="summit()">Save</button>
+          <button mat-raised-button color="warn" *ngIf="mode == 'edit'" (click)="delete()">Delete</button>
         </div>
       </mat-card-actions>
     </mat-card>
