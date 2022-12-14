@@ -14,6 +14,7 @@ import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {Interceptors} from "./core/interceptor/interceptors";
 import {SharedModule} from "./shared/shared.module";
 
 @NgModule({
@@ -36,7 +37,9 @@ import {SharedModule} from "./shared/shared.module";
     MatSnackBarModule,
     FontAwesomeModule
   ],
-  providers: [],
+  providers: [
+    ...Interceptors
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
