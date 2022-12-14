@@ -1,0 +1,28 @@
+.date_container {
+  //display: flex !important;
+  position: relative;
+  .toggle {
+    position: absolute;
+    margin-top: 12px;
+    right: 0;
+  }
+  white-space: nowrap;
+}
+
+.field {
+  width: 100%;
+}
+
+.form-container {
+  width: 350px;
+  max-width: 350px;
+}
+
+.field-container {
+
+}
+
+.page-content {
+  display: flex;
+  justify-content: center;
+}

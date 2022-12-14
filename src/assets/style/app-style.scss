@@ -1,0 +1,65 @@
+.input-field {
+  width: 100%;
+}
+
+.avatar {
+  border-radius: 9999999px;
+  height: 60px;
+
+}
+.avatar.small {
+  height: 35px;
+}
+
+.avatar.border {
+  border: 2px solid var(--primaryColor);
+}
+
+// card
+mat-card-actions {
+  display: flex !important;
+  justify-content: center;
+}
+
+// page have table
+.page-container {
+  .page-header {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .page-action {
+    display: flex;
+    justify-content: right;
+    padding-top: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+  }
+  .page-content {
+    padding: 0 1rem;
+  }
+  background: var(--white);
+}
+
+// table
+
+table {
+  width: 100%;
+}
+.table-container {
+  padding: 1rem;
+  table {
+    width: 100%;
+  }
+}
+
+// app drawl
+.mat-drawer-container {
+  background-color: transparent;
+}
+
+.mat-form-field-wrapper {
+  padding-bottom: 0;
+}
