@@ -16,10 +16,14 @@ import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {Interceptors} from "./core/interceptor/interceptors";
 import {SharedModule} from "./shared/shared.module";
+import { CardListComponent } from './features/card-list/card-list.component';
+import { CardDetailComponent } from './features/card-detail/card-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    CardListComponent,
+    CardDetailComponent,
 
   ],
   imports: [

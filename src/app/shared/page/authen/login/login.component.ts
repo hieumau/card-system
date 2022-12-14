@@ -33,8 +33,7 @@ export class LoginComponent implements OnInit {
     this.user.password = this.form.value.password
     this.authService.login(this.user).then(result => {
       console.log(result),
-        this.router.navigate(['user/list'])
-
+        this.router.navigate(['cards'])
     })
   }
 
