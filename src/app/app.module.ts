@@ -18,12 +18,14 @@ import {Interceptors} from "./core/interceptor/interceptors";
 import {SharedModule} from "./shared/shared.module";
 import { CardListComponent } from './features/card-list/card-list.component';
 import { CardDetailComponent } from './features/card-detail/card-detail.component';
+import { CardCreateComponent } from './features/card-create/card-create.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardListComponent,
     CardDetailComponent,
+    CardCreateComponent,
 
   ],
   imports: [

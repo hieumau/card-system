@@ -1,0 +1,43 @@
+<div class="page-container">
+  <div class="page-header">Create Card</div>
+  <div class="page-content">
+    <mat-card class="card">
+      <mat-card-content class="pt-5">
+        <mat-form-field class="input-field">
+          <mat-label>Name</mat-label>
+          <input matInput [(ngModel)]="card.Name" placeholder="Name">
+        </mat-form-field>
+        <mat-form-field class="input-field">
+          <mat-label>Type</mat-label>
+          <input matInput [(ngModel)]="card.Type" placeholder="Type">
+        </mat-form-field>
+        <mat-form-field class="input-field">
+          <mat-label>Level</mat-label>
+          <input matInput [(ngModel)]="card.Level" placeholder="Level">
+        </mat-form-field>
+        <mat-form-field class="input-field">
+          <mat-label>Race</mat-label>
+          <input matInput [(ngModel)]="card.Race" placeholder="Race">
+        </mat-form-field>
+        <mat-form-field class="input-field">
+          <mat-label>Attribute</mat-label>
+          <input matInput [(ngModel)]="card.Attribute" placeholder="Attribute">
+        </mat-form-field>
+        <mat-form-field class="input-field">
+          <mat-label>ATK</mat-label>
+          <input matInput [(ngModel)]="card.ATK" placeholder="ATK">
+        </mat-form-field>
+        <mat-form-field class="input-field">
+          <mat-label>DEF</mat-label>
+          <input matInput [(ngModel)]="card.DEF" placeholder="DEF">
+        </mat-form-field>
+      </mat-card-content>
+
+      <mat-card-actions>
+        <div>
+          <button mat-raised-button color="primary" (click)="createCard()">Create</button>
+        </div>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

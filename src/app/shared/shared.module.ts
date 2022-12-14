@@ -19,6 +19,7 @@ import {MaterialElevationDirective} from "./directive/material-elevation.directi
 import {LoginComponent} from "./page/authen/login/login.component";
 import {RegisterComponent} from "./page/authen/register/register.component";
 import {IndexComponent} from "./page/index/index.component";
+import { CardUiComponent } from './component/card-ui/card-ui.component';
 
 
 @NgModule({
@@ -27,14 +28,14 @@ import {IndexComponent} from "./page/index/index.component";
     RegisterComponent,
     IndexComponent,
     MaterialElevationDirective,
-
-
+    CardUiComponent,
   ],
   exports: [
     LoginComponent,
     RegisterComponent,
     IndexComponent,
     MaterialElevationDirective,
+    CardUiComponent,
 
   ],
     imports: [
