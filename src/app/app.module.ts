@@ -6,6 +6,7 @@ import {MatCardModule} from "@angular/material/card";
 import {DateAdapter, MAT_DATE_LOCALE} from "@angular/material/core";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
+import {MatPaginatorModule} from "@angular/material/paginator";
 import {MatSnackBar, MatSnackBarModule} from "@angular/material/snack-bar";
 import {MatTableModule} from "@angular/material/table";
 import {MatToolbarModule} from "@angular/material/toolbar";
@@ -43,7 +44,8 @@ import { CardCreateComponent } from './features/card-create/card-create.componen
     HttpClientModule,
     MatSnackBarModule,
     FontAwesomeModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatPaginatorModule
   ],
   providers: [
     ...Interceptors

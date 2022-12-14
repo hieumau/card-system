@@ -1,7 +1,7 @@
 <button (click)="authService.signOut()">logout</button>
 <div class="page-container">
   <ul class="cards">
-    <li *ngFor="let card of cardList" class="cards__item">
+    <li *ngFor="let card of page.data" class="cards__item">
       <div class="card">
         <!--      <div class="card__image card__image&#45;&#45;fence"></div>-->
         <div class="card__content">
@@ -44,5 +44,15 @@
       </div>
     </li>
   </ul>
-
+  <mat-paginator *ngIf="cardList" #paginator
+                 class="demo-paginator"
+                 (page)="handlePageEvent($event)"
+                 [length]="page.total"
+                 [pageSize]="page.per_page"
+                 [showFirstLastButtons]="true"
+                 [pageSizeOptions]="[6, 9, 12, 24, 100]"
+                 [pageIndex]="page.page"
+                 
+                 aria-label="Select page">
+  </mat-paginator>
 </div>

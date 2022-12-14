@@ -1,9 +1,9 @@
 <mat-toolbar class="toolbar">
   <span>CARD APP</span>
   <div style="width: 100%"></div>
-  <button class="header-button" *ngIf="authService.isLoggedIn">Create Card</button>
+  <button class="header-button" [routerLink]="['cards']" *ngIf="true">View Cards</button>
+  <button class="header-button" *ngIf="authService.isLoggedIn" [routerLink]="['add']">Create Card</button>
   <button class="header-button secondary" (click)="authService.signOut()" *ngIf="authService.isLoggedIn">Logout</button>
-  <button class="header-button" [routerLink]="['cards']" *ngIf="!authService.isLoggedIn">View Cards</button>
   <button class="header-button" [routerLink]="['login']" *ngIf="!authService.isLoggedIn">Login</button>
 
 </mat-toolbar>
