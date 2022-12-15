@@ -23,6 +23,14 @@ export class HttpErrorInterceptor implements HttpInterceptor {
           let errorMessage: string;
           errorMessage = error.error.message
 
+          if (error.error) {
+            if (error.error.message) {
+              errorMessage = error.error.message
+            } else {
+              errorMessage = error.error.error
+            }
+          }
+
           this.snackBar.open(errorMessage, 'Close', {duration: 4000})
           return throwError(error);
         }),

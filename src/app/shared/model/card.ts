@@ -1,5 +1,6 @@
 export class Card {
   _id: CardId
+  id: string
   Name: string
   Type: string
   Level: string
