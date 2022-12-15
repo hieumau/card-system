@@ -13,9 +13,6 @@ import {MatProgressBarModule} from "@angular/material/progress-bar";
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import {MatTooltipModule} from "@angular/material/tooltip";
 import {RouterLink} from "@angular/router";
-import {ShareModule} from "ngx-sharebuttons";
-import {ShareButtonModule} from "ngx-sharebuttons/button";
-import {ShareIconsModule} from "ngx-sharebuttons/icons";
 import {NetworkingSpinnerComponent} from "./component/networking-spinner/networking-spinner.component";
 import {LoginComponent} from "./page/authen/login/login.component";
 import {RegisterComponent} from "./page/authen/register/register.component";
@@ -46,9 +43,6 @@ import {RegisterComponent} from "./page/authen/register/register.component";
     ReactiveFormsModule,
     MatIconModule,
     MatTooltipModule,
-    ShareModule,
-    ShareButtonModule,
-    ShareIconsModule,
     FormsModule,
     MatProgressSpinnerModule,
   ],
