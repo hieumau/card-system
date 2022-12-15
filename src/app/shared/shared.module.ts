@@ -17,7 +17,6 @@ import {ShareModule} from "ngx-sharebuttons";
 import {ShareButtonModule} from "ngx-sharebuttons/button";
 import {ShareIconsModule} from "ngx-sharebuttons/icons";
 import {NetworkingSpinnerComponent} from "./component/networking-spinner/networking-spinner.component";
-import {MaterialElevationDirective} from "./directive/material-elevation.directive";
 import {LoginComponent} from "./page/authen/login/login.component";
 import {RegisterComponent} from "./page/authen/register/register.component";
 import {IndexComponent} from "./page/index/index.component";
@@ -28,14 +27,12 @@ import {IndexComponent} from "./page/index/index.component";
     LoginComponent,
     RegisterComponent,
     IndexComponent,
-    MaterialElevationDirective,
     NetworkingSpinnerComponent
   ],
   exports: [
     LoginComponent,
     RegisterComponent,
     IndexComponent,
-    MaterialElevationDirective,
     NetworkingSpinnerComponent
   ],
   imports: [

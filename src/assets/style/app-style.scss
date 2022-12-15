@@ -2,26 +2,10 @@
   width: 100%;
 }
 
-.avatar {
-  border-radius: 9999999px;
-  height: 60px;
-
+.toolbar {
+  position: fixed;
+  z-index: 100;
 }
-
-.avatar.small {
-  height: 35px;
-}
-
-.avatar.border {
-  border: 2px solid var(--primaryColor);
-}
-
-// card
-mat-card-actions {
-  display: flex !important;
-  justify-content: center;
-}
-
 // page have table
 .page-container {
   background-color: #f0f0f0;
@@ -50,35 +34,6 @@ mat-card-actions {
   }
 
   min-height: 100vh;
-}
-
-// table
-
-table {
-  width: 100%;
-}
-
-.table-container {
-  padding: 1rem;
-
-  table {
-    width: 100%;
-  }
-}
-
-// app drawl
-.mat-drawer-container {
-  background-color: transparent;
-}
-
-.mat-form-field-wrapper {
-  padding-bottom: 0;
-}
-
-
-.toolbar {
-  position: fixed;
-  z-index: 100;
 }
 
 /* CSS */
@@ -217,8 +172,6 @@ table {
   padding-bottom: 10px;
 
 }
-
-
 
 .info-pair {
   display: flex;
