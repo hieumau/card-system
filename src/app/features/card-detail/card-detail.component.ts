@@ -18,14 +18,18 @@ export class CardDetailComponent implements OnInit {
               public authService: AuthService,
               private snackBar: MatSnackBar) {
   }
-
+  isLoading = false
   card: Card
   cardId: any
 
   ngOnInit(): void {
+    this.isLoading = true
     this.cardId = this.route.snapshot.paramMap.get('id');
     this.cardService.getCard(this.cardId).then(result => {
       this.card = result
+      this.isLoading = false
+    }).catch(error => {
+      this.isLoading = false
     })
   }
 

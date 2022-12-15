@@ -10,11 +10,13 @@ import {MatGridListModule} from "@angular/material/grid-list";
 import {MatIconModule} from "@angular/material/icon";
 import {MatInputModule} from "@angular/material/input";
 import {MatProgressBarModule} from "@angular/material/progress-bar";
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import {MatTooltipModule} from "@angular/material/tooltip";
 import {RouterLink} from "@angular/router";
 import {ShareModule} from "ngx-sharebuttons";
 import {ShareButtonModule} from "ngx-sharebuttons/button";
 import {ShareIconsModule} from "ngx-sharebuttons/icons";
+import {NetworkingSpinnerComponent} from "./component/networking-spinner/networking-spinner.component";
 import {MaterialElevationDirective} from "./directive/material-elevation.directive";
 import {LoginComponent} from "./page/authen/login/login.component";
 import {RegisterComponent} from "./page/authen/register/register.component";
@@ -27,32 +29,35 @@ import {IndexComponent} from "./page/index/index.component";
     RegisterComponent,
     IndexComponent,
     MaterialElevationDirective,
+    NetworkingSpinnerComponent
   ],
   exports: [
     LoginComponent,
     RegisterComponent,
     IndexComponent,
     MaterialElevationDirective,
+    NetworkingSpinnerComponent
   ],
-    imports: [
-        CommonModule,
-        MatCardModule,
-        MatFormFieldModule,
-        MatButtonModule,
-        MatInputModule,
-        MatProgressBarModule,
-        RouterLink,
-        MatGridListModule,
-        MatExpansionModule,
-        MatDatepickerModule,
-        ReactiveFormsModule,
-        MatIconModule,
-        MatTooltipModule,
-        ShareModule,
-        ShareButtonModule,
-        ShareIconsModule,
-        FormsModule
-    ],
+  imports: [
+    CommonModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatButtonModule,
+    MatInputModule,
+    MatProgressBarModule,
+    RouterLink,
+    MatGridListModule,
+    MatExpansionModule,
+    MatDatepickerModule,
+    ReactiveFormsModule,
+    MatIconModule,
+    MatTooltipModule,
+    ShareModule,
+    ShareButtonModule,
+    ShareIconsModule,
+    FormsModule,
+    MatProgressSpinnerModule,
+  ],
   providers: []
 })
 export class SharedModule {
