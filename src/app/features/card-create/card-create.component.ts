@@ -18,11 +18,16 @@ export class CardCreateComponent implements OnInit {
 
   constructor(private cardService: CardService,
               private router: Router,
+              private authService: AuthService,
               private route: ActivatedRoute,
               private snackBar: MatSnackBar) {
   }
 
   ngOnInit(): void {
+    if (!this.authService.isLoggedIn) {
+      this.router.navigate(['login'])
+      return
+    }
     var url = this.router.url;
     if (url.endsWith('/edit')) {
       this.mode = 'edit'
