@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {ActivatedRoute, Router} from "@angular/router";
+import {AuthService} from "../../core/service/auth.service";
 import {Card} from "../../shared/model/card";
 import {CardService} from "../../shared/service/card.service";
 
@@ -35,7 +36,9 @@ export class CardCreateComponent implements OnInit {
     if (this.mode == 'edit') {
       this.cardId = this.route.snapshot.paramMap.get('id');
       console.log(this.cardId)
-      // get card by id here
+      this.cardService.getCard(this.cardId).then(result => {
+        this.card = result
+      })
     }
   }
 
@@ -48,7 +51,7 @@ export class CardCreateComponent implements OnInit {
 
   updateCard() {
     this.validate()
-    this.cardService.createCard(this.card).then(result => {
+    this.cardService.updateCard(this.card).then(result => {
       this.snackBar.open('Update card successfully!', '', {duration: 3000})
     })
   }

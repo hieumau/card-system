@@ -60,4 +60,15 @@ export class CardService {
         })
     })
   }
+
+  getCard(id: string): Promise<Card> {
+    return new Promise((resolve, reject) => {
+      this.apiService.get(this.baseUrl + 'show_card', id).subscribe((value: any) => {
+          resolve(value)
+        },
+        error => {
+          reject(error)
+        })
+    })
+  }
 }

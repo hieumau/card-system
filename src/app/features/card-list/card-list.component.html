@@ -2,7 +2,7 @@
 <div class="page-container">
   <ul class="cards">
     <li *ngFor="let card of page.data" class="cards__item">
-      <div class="card">
+      <div [routerLink]="[card._id.$oid]" class="card">
         <!--      <div class="card__image card__image&#45;&#45;fence"></div>-->
         <div class="card__content">
           <div class="card__title">{{card.Name}}</div>
@@ -52,7 +52,7 @@
                  [showFirstLastButtons]="true"
                  [pageSizeOptions]="[6, 9, 12, 24, 100]"
                  [pageIndex]="page.page"
-                 
+
                  aria-label="Select page">
   </mat-paginator>
 </div>
