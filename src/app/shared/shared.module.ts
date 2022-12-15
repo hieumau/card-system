@@ -19,20 +19,17 @@ import {ShareIconsModule} from "ngx-sharebuttons/icons";
 import {NetworkingSpinnerComponent} from "./component/networking-spinner/networking-spinner.component";
 import {LoginComponent} from "./page/authen/login/login.component";
 import {RegisterComponent} from "./page/authen/register/register.component";
-import {IndexComponent} from "./page/index/index.component";
 
 
 @NgModule({
   declarations: [
     LoginComponent,
     RegisterComponent,
-    IndexComponent,
     NetworkingSpinnerComponent
   ],
   exports: [
     LoginComponent,
     RegisterComponent,
-    IndexComponent,
     NetworkingSpinnerComponent
   ],
   imports: [

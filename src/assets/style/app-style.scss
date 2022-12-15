@@ -173,6 +173,12 @@
 
 }
 
+// card
+.mat-card-actions {
+  display: flex !important;
+  justify-content: center;
+}
+
 .info-pair {
   display: flex;
   justify-content: space-between;

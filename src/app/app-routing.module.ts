@@ -6,7 +6,6 @@ import {CardDetailComponent} from "./features/card-detail/card-detail.component"
 import {CardListComponent} from "./features/card-list/card-list.component";
 import {LoginComponent} from "./shared/page/authen/login/login.component";
 import {RegisterComponent} from "./shared/page/authen/register/register.component";
-import {IndexComponent} from "./shared/page/index/index.component";
 
 const routes: Routes = [
   {
