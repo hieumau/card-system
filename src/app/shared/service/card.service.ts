@@ -54,7 +54,7 @@ export class CardService {
     card.id = card._id!!.$oid
     delete card._id
     return new Promise((resolve, reject) => {
-      this.apiService.post(this.baseUrl + 'edit_card', card).subscribe((value: any) => {
+      this.apiService.put(this.baseUrl + 'edit_card', card).subscribe((value: any) => {
           resolve(value)
         },
         error => {
