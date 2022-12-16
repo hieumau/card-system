@@ -1,4 +1,18 @@
+<app-networking-spinner [show]="isLoading"></app-networking-spinner>
 <div class="page-container">
+  <div style="display: flex; justify-content: center; height: 50px; margin-bottom: 15px">
+    <mat-form-field appearance="fill">
+      <mat-label>Search</mat-label>
+      <input
+        (keyup.enter)="reload()"
+        matInput
+        [(ngModel)]="searchKey"
+        placeholder="Search keyword"
+      />
+      <mat-icon class='search-icon' color="primary" matPrefix (click)="reload()">search</mat-icon>
+    </mat-form-field>
+    <button mat-flat-button color="primary" (click)="reload()">Search</button>
+  </div>
   <ul class="cards">
     <li *ngFor="let card of page.data" class="cards__item">
       <div [routerLink]="[card._id.$oid]" class="card">
@@ -43,7 +57,7 @@
       </div>
     </li>
   </ul>
-  <mat-paginator *ngIf="cardList" #paginator
+  <mat-paginator *ngIf="cardList && !isLoading" #paginator
                  class="demo-paginator"
                  (page)="handlePageEvent($event)"
                  [length]="page.total"

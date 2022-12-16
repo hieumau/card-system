@@ -5,6 +5,7 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatCardModule} from "@angular/material/card";
 import {DateAdapter, MAT_DATE_LOCALE} from "@angular/material/core";
 import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatIconModule} from "@angular/material/icon";
 import {MatInputModule} from "@angular/material/input";
 import {MatPaginatorModule} from "@angular/material/paginator";
 import {MatSnackBar, MatSnackBarModule} from "@angular/material/snack-bar";
@@ -30,23 +31,24 @@ import { CardCreateComponent } from './features/card-create/card-create.componen
     CardCreateComponent,
 
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatCardModule,
-    MatButtonModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatTableModule,
-    SharedModule,
-    FormsModule,
-    HttpClientModule,
-    MatSnackBarModule,
-    FontAwesomeModule,
-    MatToolbarModule,
-    MatPaginatorModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatCardModule,
+        MatButtonModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatTableModule,
+        SharedModule,
+        FormsModule,
+        HttpClientModule,
+        MatSnackBarModule,
+        FontAwesomeModule,
+        MatToolbarModule,
+        MatPaginatorModule,
+        MatIconModule
+    ],
   providers: [
     ...Interceptors
   ],

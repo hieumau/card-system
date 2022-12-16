@@ -27,6 +27,17 @@ export class CardService {
     })
   }
 
+  searchCard(key: string): Promise<Card[]> {
+    return new Promise((resolve, reject) => {
+      this.apiService.post(this.baseUrl + 'search', {search: key}).subscribe((value: any) => {
+          resolve(value)
+        },
+        error => {
+          reject(error)
+        })
+    })
+  }
+
   createCard(card: Card): Promise<{ id: string }> {
     return new Promise((resolve, reject) => {
       this.apiService.post(this.baseUrl + 'add_card', card).subscribe((value: any) => {

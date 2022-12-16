@@ -14,8 +14,12 @@ import {CardService} from "../../shared/service/card.service";
 export class CardListComponent implements OnInit {
 
   cardList: Card[] = []
+  isLoading = false
+
   pageIndex: number = 0;
   page: PageData<Card> = new PageData<Card>()
+
+  searchKey: string = ''
 
   constructor(private cardService: CardService,
               private snackBar: MatSnackBar,
@@ -31,11 +35,20 @@ export class CardListComponent implements OnInit {
   }
 
   reload() {
-    this.cardService.getListCard().then(result => {
-      this.cardList = result
-      this.updatePaginate()
-    })
+    this.isLoading = true
+    if (this.searchKey && this.searchKey.trim().length > 0) {
+      this.cardService.searchCard(this.searchKey.trim()).then(result => {
+        this.cardList = result
+        this.updatePaginate()
+      })
+    } else {
+      this.cardService.getListCard().then(result => {
+        this.cardList = result
+        this.updatePaginate()
+      })
+    }
   }
+
   isLoggedIn() {
     var loggedIn = this.authService.isLoggedIn;
     return loggedIn
@@ -59,5 +72,6 @@ export class CardListComponent implements OnInit {
     this.page.total = this.cardList.length
     let data = this.cardList.slice((this.page.page) * this.page.per_page!!, (this.page.page + 1) * this.page.per_page!!);
     this.page.data = data
+    this.isLoading = false
   }
 }
